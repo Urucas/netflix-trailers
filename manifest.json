@@ -1,8 +1,8 @@
 {
   "name": "Netflix trailers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
-  "description": "Preview the movie(series) of Netflix using this Chrome extension to watch the youtube trailer."
+  "description": "Preview the movie(series) of Netflix using this Chrome extension to watch the youtube trailer.",
   "homepage_url": "https://github.com/Urucas/netflix-trailers",
   "icons": {
     "16": "icons/icon16.png",
