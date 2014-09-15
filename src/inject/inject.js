@@ -2,7 +2,7 @@ chrome.extension.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
 		if (document.readyState === "complete") {
 			clearInterval(readyStateCheckInterval);
-
+			console.log("Netflix trailer extension loaded");
 			try {
 
 				var popUp = document.getElementById("BobMovie");
@@ -88,7 +88,7 @@ function openTrailerWindow(url) {
 	modal.id = "trailer-modal";
 	modal.style.backgroundColor = "rgba(0,0,0,0.8)";
 	modal.style.zIndex = 99999;
-	modal.innerHTML = '<a class="trailer-modal-close" onclick="closeTrailerWindow();">Close</a><iframe width="100%" height="100%" src="'+src+'" frameborder="0"></iframe>';
+	modal.innerHTML = '<a class="trailer-modal-close">Close</a><iframe width="100%" height="100%" src="'+src+'" frameborder="0"></iframe>';
 
 	var body = document.getElementsByTagName("body")[0];
 	body.appendChild(modal);
@@ -105,7 +105,7 @@ function openTrailerWindow(url) {
 		var body = document.getElementsByTagName("body")[0];
 		var modal = document.getElementById("trailer-modal");
 		body.removeChild(modal);
-	})
+	});
 }
 
 function getVideoID(ytURL) {

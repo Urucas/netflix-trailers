@@ -18,14 +18,12 @@
   },
   "permissions": [
    	"tabs", 
-		"*://*.netflix.com/*", 
-		"*://*.google.com.ar/*"
+		"*://*.netflix.com/*" 
   ],
   "content_scripts": [
     {
       "matches": [
-				"*://*.netflix.com/*", 
-				"*://*.google.com.ar/*"
+				"*://*.netflix.com/*" 
       ],
       "js": [
         "src/inject/inject.js"
